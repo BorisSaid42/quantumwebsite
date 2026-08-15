@@ -1,6 +1,7 @@
 {
-  "name": "quantumvault-website",
-  "version": "1.0.0",
+  "name": "speedspin-website",
+  "version": "2.0.0",
+  "description": "SpeedSpin — B2B iGaming software: platform licensing, original games, CRM, payments and custom development.",
   "scripts": {
     "start": "node server.js"
   },

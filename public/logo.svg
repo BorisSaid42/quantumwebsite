@@ -3,9 +3,9 @@
   <defs>
     <!-- Subtle vertical gradient on the reel window implies a cylinder. -->
     <linearGradient id="reel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4ADE80"/>
-      <stop offset="58%" stop-color="#22C55E"/>
-      <stop offset="100%" stop-color="#17A34A"/>
+      <stop offset="0%" stop-color="#4A7FC1"/>
+      <stop offset="58%" stop-color="#2F5FA8"/>
+      <stop offset="100%" stop-color="#26508F"/>
     </linearGradient>
   </defs>
 
@@ -19,12 +19,12 @@
   <g transform="translate(202 18)">
     <rect width="206" height="60" rx="8" fill="url(#reel)"/>
     <!-- Hairline reel positions -->
-    <g stroke="#052E16" stroke-opacity="0.18" stroke-width="1.5">
+    <g stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.5">
       <path d="M51.5 0v60"/>
       <path d="M103 0v60"/>
       <path d="M154.5 0v60"/>
     </g>
-    <g fill="#052E16" font-family="'Instrument Sans','Helvetica Neue',Helvetica,Arial,sans-serif"
+    <g fill="#FFFFFF" font-family="'Instrument Sans','Helvetica Neue',Helvetica,Arial,sans-serif"
        font-size="42" font-weight="800" text-anchor="middle">
       <text x="26" y="44">S</text>
       <text x="77" y="44">P</text>

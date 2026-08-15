@@ -13,7 +13,7 @@
     <meta property="og:description" content="Platform licensing, original games, CRM, payments and custom development for licensed casino operators.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0C11'/%3E%3Crect x='5' y='8' width='22' height='16' rx='3' fill='%2322C55E'/%3E%3Cpath d='M16 8v16' stroke='%23052E16' stroke-opacity='.22' stroke-width='1.2'/%3E%3Ctext x='16' y='21' font-family='Helvetica,Arial,sans-serif' font-size='12' font-weight='bold' fill='%23052E16' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F5FA8'/%3E%3Cpath d='M16 6v20' stroke='%23FFFFFF' stroke-opacity='.28' stroke-width='1.2'/%3E%3Ctext x='16' y='21' font-family='Helvetica,Arial,sans-serif' font-size='12' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after {
@@ -23,26 +23,30 @@
         }
 
         :root {
-            --bg: #0A0C11;
-            --surface: #12151D;
-            --surface-2: #171B25;
-            --border: #242938;
-            --border-soft: #1C2130;
-            --text: #F3F5F9;
-            --text-muted: #99A2B5;
-            --text-dim: #6C7488;
-            /* Emerald taken from the SpeedSpin reel mark, deepened so it reads
-               as premium rather than neon. */
-            --accent: #22C55E;
-            --accent-hover: #34D17E;
-            --accent-soft: rgba(34, 197, 94, 0.10);
-            --accent-line: rgba(34, 197, 94, 0.30);
-            --accent-2: #2DD4BF;
+            /* Warm paper neutrals rather than pure white/grey, so the blues
+               read as considered instead of clinical. */
+            --bg: #FBFAF8;
+            --surface: #FFFFFF;
+            --surface-2: #F5F2ED;
+            --border: #E2DDD4;
+            --border-soft: #EDE9E1;
+            --text: #1E2733;
+            --text-muted: #58626F;
+            /* Darker than the dark-theme equivalent: the same grey that passed
+               on a near-black ground only reaches 3.2:1 on white. */
+            --text-dim: #69737F;
+            /* Muted professional blue; deep enough to carry white text. */
+            --accent: #2F5FA8;
+            --accent-hover: #24528F;
+            --accent-soft: rgba(47, 95, 168, 0.07);
+            --accent-line: rgba(47, 95, 168, 0.22);
+            /* Warm terracotta, darkened so it stays legible as display text. */
+            --accent-2: #A85F3C;
             /* Reel window: a subtle vertical gradient implies a cylinder. */
-            --reel-top: #4ADE80;
-            --reel-mid: #22C55E;
-            --reel-bot: #17A34A;
-            --reel-ink: #052E16;
+            --reel-top: #4A7FC1;
+            --reel-mid: #2F5FA8;
+            --reel-bot: #26508F;
+            --reel-ink: #FFFFFF;
             --maxw: 1120px;
         }
 
@@ -59,7 +63,6 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
@@ -76,7 +79,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 12, 17, 0.82);
+            background: rgba(251, 250, 248, 0.85);
             backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border-soft);
         }
@@ -112,7 +115,7 @@
         .wm-reel > span {
             color: var(--reel-ink);
             padding: 0.22em 0.19em;
-            box-shadow: inset -1px 0 0 rgba(5, 46, 22, 0.18);
+            box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.28);
         }
 
         .wm-reel > span:last-child { box-shadow: none; }
@@ -137,7 +140,7 @@
         .nav-cta {
             padding: 0.5rem 1.1rem;
             background: var(--accent);
-            color: #0A0C11 !important;
+            color: #FFFFFF !important;
             border-radius: 4px;
             font-weight: 600;
             transition: background 0.2s;
@@ -191,7 +194,7 @@
             left: -10%;
             width: min(620px, 85vw);
             height: min(620px, 85vw);
-            background: radial-gradient(circle, rgba(34, 197, 94, 0.14) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(47, 95, 168, 0.10) 0%, transparent 65%);
             pointer-events: none;
             z-index: -1;
         }
@@ -203,7 +206,7 @@
             right: -15%;
             width: min(560px, 80vw);
             height: min(560px, 80vw);
-            background: radial-gradient(circle, rgba(45, 212, 191, 0.11) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(199, 142, 102, 0.16) 0%, transparent 65%);
             pointer-events: none;
             z-index: -1;
         }
@@ -268,7 +271,7 @@
 
         .btn-primary {
             background: var(--accent);
-            color: #0A0C11;
+            color: #FFFFFF;
         }
 
         .btn-primary:hover { background: var(--accent-hover); }
@@ -746,7 +749,7 @@
                 right: 0;
                 flex-direction: column;
                 align-items: flex-start;
-                background: rgba(10, 12, 17, 0.98);
+                background: rgba(251, 250, 248, 0.97);
                 backdrop-filter: blur(14px);
                 border-bottom: 1px solid var(--border-soft);
                 padding: 1.25rem 2rem;

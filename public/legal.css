@@ -1,0 +1,231 @@
+/* Shared styling for the legal pages (terms, privacy, cookies).
+   The homepage keeps its CSS inline because it is a single self-contained
+   file; these three pages share enough that a real stylesheet is simpler
+   than maintaining three copies. Fonts are self-hosted — see /fonts/OFL.txt. */
+
+@font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(/fonts/instrument-sans-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(/fonts/instrument-sans-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(/fonts/jetbrains-mono-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #FBFAF8;
+    --surface: #FFFFFF;
+    --border: #E2DDD4;
+    --border-soft: #EDE9E1;
+    --text: #1E2733;
+    --text-muted: #58626F;
+    --text-dim: #69737F;
+    --accent: #2F5FA8;
+    --accent-hover: #24528F;
+    --accent-soft: rgba(47, 95, 168, 0.07);
+    --reel-top: #4A7FC1;
+    --reel-mid: #2F5FA8;
+    --reel-bot: #26508F;
+    --reel-ink: #FFFFFF;
+    --maxw: 760px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+/* Header ------------------------------------------------------------- */
+
+.legal-nav {
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--surface);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.16rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.wm-reel {
+    display: inline-flex;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--reel-top) 0%, var(--reel-mid) 58%, var(--reel-bot) 100%);
+}
+
+.wm-reel > span {
+    color: var(--reel-ink);
+    padding: 0.22em 0.19em;
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.28);
+}
+
+.wm-reel > span:last-child { box-shadow: none; }
+
+.back-link {
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.back-link:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* Document ----------------------------------------------------------- */
+
+main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+}
+
+.doc-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+}
+
+h1 {
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.doc-meta {
+    font-size: 0.86rem;
+    color: var(--text-dim);
+    padding-bottom: 1.75rem;
+    margin-bottom: 2.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+h2 {
+    font-size: 1.16rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+p, ul, ol { margin-bottom: 1.05rem; color: var(--text-muted); }
+
+main strong { color: var(--text); font-weight: 600; }
+
+ul, ol { padding-left: 1.35rem; }
+
+li { margin-bottom: 0.45rem; }
+
+main a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+main a:hover { color: var(--accent-hover); }
+
+em { font-style: italic; }
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.86em;
+    background: var(--accent-soft);
+    padding: 0.12em 0.36em;
+    border-radius: 3px;
+    color: var(--text);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.5rem 0;
+}
+
+.address {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.15rem 1.3rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* Footer ------------------------------------------------------------- */
+
+.legal-footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 2rem 1.5rem 2.5rem;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.legal-footer-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.legal-footer nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+
+.legal-footer a { color: var(--text-dim); text-decoration: none; }
+
+.legal-footer a:hover { color: var(--accent); text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .legal-nav { padding: 1rem 1.25rem; }
+    main { padding: 2.5rem 1.25rem 3rem; }
+}

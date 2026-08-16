@@ -29,7 +29,9 @@ app.use((req, res, next) => {
   return res.redirect(301, `${protocol}://${CANONICAL_HOST}${req.originalUrl}`);
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+// `extensions` lets /terms resolve to public/terms.html. Without it the
+// catch-all below would swallow those paths and quietly serve the homepage.
+app.use(express.static(path.join(__dirname, "public"), { extensions: ["html"] }));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));

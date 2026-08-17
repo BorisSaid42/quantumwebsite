@@ -291,7 +291,19 @@
             font-size: 1.08rem;
             color: var(--text-muted);
             max-width: 620px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Standing B2B-only notice. Deliberately quiet — it is a statement of
+           position, not a marketing line — but sits above the fold. */
+        .hero-notice {
+            font-size: 0.86rem;
+            line-height: 1.55;
+            color: var(--text-dim);
+            max-width: 620px;
             margin-bottom: 2.25rem;
+            padding-left: 0.9rem;
+            border-left: 2px solid var(--accent-line);
         }
 
         .btn-row {
@@ -761,7 +773,16 @@
             color: var(--text-dim);
         }
 
+        /* The bare `nav` rule above styles the fixed site header, so every
+           override here is load-bearing: without them this footer nav is
+           pinned over the header. */
         .footer-legal {
+            position: static;
+            z-index: auto;
+            padding: 0;
+            background: none;
+            backdrop-filter: none;
+            border-bottom: none;
             display: flex;
             gap: 1.1rem;
             flex-wrap: wrap;
@@ -855,6 +876,8 @@
         <p class="eyebrow">B2B iGaming Software Provider</p>
         <h1>White label casino technology, <em>licensed to operators</em> who move fast.</h1>
         <p class="hero-sub">SpeedSpin licenses the core software stack behind a modern online casino — platform, original games, CRM and payments — as modular products or a single turnkey solution. Built for casino and sweepstakes operators, delivered by an engineering team that also builds to spec.</p>
+        <p class="hero-notice">B2B technology only. SpeedSpin develops and licenses software to operators and does not operate gambling services or hold player funds.</p>
+
         <div class="btn-row">
             <a href="#contact" class="btn btn-primary">Request a demo</a>
             <a href="#products" class="btn btn-secondary">Explore our products</a>
@@ -886,7 +909,7 @@
     <section id="products">
         <p class="section-label">What we license</p>
         <h2>A focused stack, not a catalogue</h2>
-        <p class="section-intro">We deliberately keep our offering narrow. Every product below is one we build, run and license ourselves — so integrations are supported by the people who wrote the code, and the roadmap answers to our partners rather than to a marketplace.</p>
+        <p class="section-intro">We deliberately keep our offering narrow. Every product below is one we develop, maintain and license ourselves — so integrations are supported by the people who wrote the code, and the roadmap answers to our partners rather than to a marketplace.</p>
 
         <div class="product-grid">
             <div class="product-card">
@@ -939,7 +962,7 @@
                 <p>The supporting systems an operation needs day to day, licensed individually so you can fill gaps rather than replace what works.</p>
                 <ul class="card-list">
                     <li>Affiliate &amp; agent management</li>
-                    <li>Risk, fraud, AML and KYC tooling</li>
+                    <li>Risk, fraud, and operator-defined AML and KYC tooling</li>
                     <li>Jackpots, tournaments and missions</li>
                     <li>Reporting, BI and data exports</li>
                 </ul>
@@ -964,12 +987,12 @@
     <section id="platform" style="padding-bottom: 0;">
         <p class="section-label">Product 01</p>
         <h2>Platform Licensing</h2>
-        <p class="section-intro">License the casino platform under your own brand, or take a turnkey build where we configure and deploy the full stack for you. Either way you get the same core: one wallet, one player record, one back office.</p>
+        <p class="section-intro">License the casino platform under your own brand, or take a turnkey build where we configure and deploy the technology environment required for launch. Either way you get the same core: one wallet, one player record, one back office.</p>
 
         <div class="detail-block">
             <div>
                 <h3>White label or turnkey — your call</h3>
-                <p><strong>White label</strong> puts your brand on our platform and infrastructure, with the fastest possible route to launch and the hosting and platform maintenance handled on our side.</p>
+                <p><strong>White label</strong> puts your brand on our platform and infrastructure, with the fastest possible route to launch and the technology infrastructure and platform support provided by our team, while the operator remains responsible for its player-facing operations and regulatory obligations.</p>
                 <p><strong>Turnkey</strong> licenses the platform to you directly, running under your own licence or authorisation and your own commercial agreements, with full control of configuration, content mix and payment relationships.</p>
                 <div class="tags">
                     <span class="tag tag-accent">White label</span>
@@ -1002,7 +1025,7 @@
                 </div>
                 <div class="feature">
                     <h4>Compliance hooks</h4>
-                    <p>Responsible gaming limits, self-exclusion, KYC checkpoints and regulator reporting endpoints.</p>
+                    <p>Responsible gaming limits, operator-managed self-exclusion workflows, KYC checkpoints and regulator reporting endpoints.</p>
                 </div>
             </div>
         </div>
@@ -1091,6 +1114,7 @@
                 <h3>Payment Software</h3>
                 <p>A payment layer that sits between your cashier and your providers. Add, weight and fail over between PSPs without a platform release, route by geography, currency, amount or player segment, and keep withdrawals moving through an approval queue your finance team actually controls.</p>
                 <p>Fiat and crypto rails are treated the same way — one ledger, one reconciliation model, one set of reports.</p>
+                <p><strong>SpeedSpin provides payment orchestration technology only. Payment acquiring, custody, transmission and settlement are handled by payment providers contracted directly by the operator. SpeedSpin does not hold player funds.</strong></p>
                 <div class="tags">
                     <span class="tag">PSP orchestration</span>
                     <span class="tag">Smart routing</span>
@@ -1139,7 +1163,7 @@
                 </div>
                 <div class="feature">
                     <h4>AML &amp; KYC tooling</h4>
-                    <p>Verification workflows, provider integrations, thresholds and audit-ready records. You set the policy and make the decisions; the tooling evidences them.</p>
+                    <p>Software tools supporting operator-defined KYC and AML workflows, including third-party verification integrations, configurable thresholds and audit records. Regulatory responsibility remains with the operator.</p>
                 </div>
                 <div class="feature">
                     <h4>Jackpots &amp; tournaments</h4>
@@ -1151,7 +1175,7 @@
                 </div>
                 <div class="feature">
                     <h4>Responsible gaming</h4>
-                    <p>Deposit, loss and session limits, reality checks, cool-off and self-exclusion handling.</p>
+                    <p>Deposit, loss and session limits, reality checks, cool-off and operator-managed self-exclusion workflows.</p>
                 </div>
             </div>
         </div>
@@ -1224,7 +1248,7 @@
     <section id="company">
         <p class="section-label">Who we are</p>
         <h2>Company</h2>
-        <p class="section-intro">SpeedSpin is the iGaming software brand of Quantum Vault Assets, a Cyprus-based software company headquartered in Nicosia with an engineering team distributed across Europe. We build, maintain and license our own products, and deliver bespoke development for select partners.</p>
+        <p class="section-intro">Quantum Vault Assets Ltd is a Cyprus-based software development and IP company, headquartered in Nicosia with an engineering team distributed across Europe. Through SpeedSpin, the company develops, maintains and licenses proprietary software products for the gaming and digital entertainment sector, and delivers bespoke development for select partners.</p>
 
         <div class="about-details">
             <div class="about-item">
@@ -1296,7 +1320,7 @@
                     <a href="#top" class="logo" aria-label="SpeedSpin — home">
                         <span>SPEED</span><span class="wm-reel" aria-hidden="true"><span>S</span><span>P</span><span>I</span><span>N</span></span>
                     </a>
-                    <p>White label casino platform, original game content, CRM, payment software and custom development — licensed to operators worldwide.</p>
+                    <p>White label casino platform, original game content, CRM, payment software and custom development — licensed to operators and B2B partners in permitted markets.</p>
                 </div>
                 <div class="footer-col">
                     <h5>Products</h5>
@@ -1320,11 +1344,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>&copy; 2026 SpeedSpin — a brand of Quantum Vault Assets Ltd. All rights reserved.</div>
+                <div>&copy; 2026 SpeedSpin is a trading brand of Quantum Vault Assets Ltd. All rights reserved.</div>
                 <nav class="footer-legal" aria-label="Legal">
-                    <a href="/terms">Terms of Service</a>
+                    <a href="/terms">Terms of Use</a>
                     <a href="/privacy">Privacy Policy</a>
                     <a href="/cookies">Cookie Policy</a>
+                    <a href="/disclaimer">B2B &amp; Regulatory Disclaimer</a>
                 </nav>
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
                     <span class="age-badge">18+</span>

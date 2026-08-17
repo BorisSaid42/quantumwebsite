@@ -727,7 +727,7 @@
 
         .footer-top {
             display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
             gap: 2.5rem;
             padding-bottom: 2.5rem;
             border-bottom: 1px solid var(--border-soft);
@@ -771,31 +771,6 @@
             flex-wrap: wrap;
             font-size: 0.78rem;
             color: var(--text-dim);
-        }
-
-        /* The bare `nav` rule above styles the fixed site header, so every
-           override here is load-bearing: without them this footer nav is
-           pinned over the header. */
-        .footer-legal {
-            position: static;
-            z-index: auto;
-            padding: 0;
-            background: none;
-            backdrop-filter: none;
-            border-bottom: none;
-            display: flex;
-            gap: 1.1rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-legal a {
-            color: var(--text-dim);
-            text-decoration: none;
-        }
-
-        .footer-legal a:hover {
-            color: var(--accent);
-            text-decoration: underline;
         }
 
         .age-badge {
@@ -1342,15 +1317,18 @@
                         <li><a href="mailto:contact@speedspin.com">contact@speedspin.com</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="/terms">Terms of Use</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/disclaimer">B2B &amp; Regulatory Disclaimer</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
                 <div>&copy; 2026 SpeedSpin is a trading brand of Quantum Vault Assets Ltd. All rights reserved.</div>
-                <nav class="footer-legal" aria-label="Legal">
-                    <a href="/terms">Terms of Use</a>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/cookies">Cookie Policy</a>
-                    <a href="/disclaimer">B2B &amp; Regulatory Disclaimer</a>
-                </nav>
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
                     <span class="age-badge">18+</span>
                     <span>B2B software provider. Not a gambling operator.</span>
